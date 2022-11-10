@@ -1,52 +1,40 @@
 <!DOCTYPE html>
 {%load static%}
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login</title>
-  <link rel="stylesheet" href="{% static 'css/login.css' %}">
-  <script src="https://kit.fontawesome.com/cf6fa412bd.js" crossorigin="anonymous"></script>
-</head>
-<body>
-  <div class="container">
-    <div class="buttonsForm">
-      <div class="btnColor"></div>
-      <button id="btnSignin"><b>Sign in</b></button>
-      <button id="btnSignup"><b>Sign up</b></button>
-    </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homepage</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="{% static 'css/home.css' %}" />
+  </head>
+  <body>
+    <header
+      class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom"
+    >
+      <a
+        href=""
+        class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-decoration-none logo"
+        >LOGO
+      </a>
 
-    <form  id="signin"  method="POST" name="login">
-      {% csrf_token %}
-      <input type="text" placeholder="Email" name="email_login" required />
-      <i class="fas fa-envelope iEmail"></i>
-      <input type="password" placeholder="Password" name="senha_login" required />
-      <i class="fas fa-lock iPassword"></i>
-      <div class="divCheck">
-        <input type="checkbox" />
-        <span>Remember Password</span>
-      </div>
-      <button type="submit"><b>Sign in</b></button>
-    </form>
+      <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+        <li><a href="#" class="nav-link px-2 link-actual">Home</a></li>
+        <li><a href="#" class="nav-link px-2 link">Hotéis</a></li>
+        <li><a href="#" class="nav-link px-2 link">Restaurantes</a></li>
+        <li><a href="#" class="nav-link px-2 link">Acessibilidade</a></li>
+      </ul>
 
-    <form  id="signup" method="POST" name="cadastro">
-      {% csrf_token %}
-      <input type="text" placeholder="Email" name="email_cadastro" required />
-      <i class="fas fa-envelope iEmail"></i>
-      <input type="password" placeholder="Password" name="password_cadastro1" required />
-      <i class="fas fa-lock iPassword"></i>
-      <input type="password" placeholder="Password" name="passoword_cadastro2" required />
-      <i class="fas fa-lock iPassword2"></i>
-      <div class="divCheck">
-        <input type="checkbox" />
-        <span>Terms</span>
-        
+      <div id="login" class="col-md-3 text-end">
+        <button type="button" class="btn me-2">Login</button>
+        <button type="button" class="btn">Sign-up</button>
       </div>
-      <button type="submit"><b>Sign up</b></button>
-    </form>
-  </div>
-<p>{{teste}}</p>
-  <script src="{% static 'scripts/index.js' %}"></script>
-</body>
+    </header>
+  </body>
 </html>
