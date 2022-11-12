@@ -1,6 +1,8 @@
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render, HttpResponse, redirect
 import folium
 import geocoder
+from .forms import SearchForm
+from .models import Search
 # Create your views here.
 
 def home(request):
@@ -11,7 +13,17 @@ def acessibilidade(request):
 
 def map(request):
 
-    location = geocoder.osm('recife')
+    if request.method == 'POST':
+        form = SearchForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('map')
+    else:
+        form = SearchForm()
+
+    # pegando o local do form
+    address = Search.objects.all().last()
+    location = geocoder.osm(address)
     lat = location.lat
     lng = location.lng
     country = location.country
@@ -25,13 +37,14 @@ def map(request):
     folium.Marker([-22.90279798439243, -43.17928929265192], tooltip='Rio de Janeiro').add_to(m)
 
     # aqui vamo usar o form
-    #folium.CircleMarker([lat, lng], tooltip=country).add_to(m)
+    folium.CircleMarker([lat, lng], tooltip=country).add_to(m)
 
     #Representação do mapa para o html
     m = m._repr_html_()
 
     context = {
         'm': m,
+        'form': form
     }
     return render(request, 'map.html', context)
     

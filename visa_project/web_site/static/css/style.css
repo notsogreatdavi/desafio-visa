@@ -161,4 +161,18 @@ footer .boxs:nth-child(3) {
 #map_e6ce6c7d12a45fa8ad28588bc4b04efb {
     border-radius: 10px;
 }
+.informar-location {
+    margin-left: 25%;
+}
+
+
+.location{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.form-control{
+    background-color: black;
+}
+
 

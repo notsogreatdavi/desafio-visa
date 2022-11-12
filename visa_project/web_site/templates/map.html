@@ -6,7 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Homepage</title>
+    
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    
 </head>
 
 <body>
@@ -40,7 +42,16 @@
         <!--rotapé-->
     </header>
 
-    <div class="map" style="margin-left: 25%; margin-right: 25%; width: 50%; margin-bottom: 10%; ">
+    <form method="POST">
+        {% load widget_tweaks%}
+        {% csrf_token %}
+        <div class="form-group"> 
+            {% render_field form.address class="form-control" placeholder="Location" type="text" %} 
+          </div>
+    </form>
+
+
+    <div class="map" style="margin-left: 25%; margin-right: 25%; width: 50%; margin-bottom: 10%;margin-top: 5%; ">
             {{ m|safe }}
     </div>
     <footer>
