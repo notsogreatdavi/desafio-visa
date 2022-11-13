@@ -1,82 +1,82 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 {%load static%}
 <html lang="pt-br">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Homepage</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
     <link rel="stylesheet" href="{% static 'css/home.css' %}" />
-</head>
+  </head>
 
-<body>
+  <body>
     <header>
-        <div class="container">
-            <div class="logo">LOGO</div>
+      <div class="container">
+        <div class="logo">LOGO</div>
 
-            <nav class="header-navbar">
-                <ul>
-                    <li>
-                        <a href="#" style="
+        <nav class="header-navbar">
+          <ul>
+            <li>
+              <a
+                href="#"
+                style="
                   background-color: #1e1e1e;
                   padding: 1rem;
                   border-radius: 1rem;
-                ">
+                "
+              >
                 Home
               </a>
-                    </li>
-                    <li><a href="#">Hotéis</a></li>
-                    <li><a href="#">Restaurantes</a></li>
-                    <li><a href="#">Acessibilidade</a></li>
-                </ul>
-            </nav>
+            </li>
+            <li><a href="#">Hotéis</a></li>
+            <li><a href="#">Restaurantes</a></li>
+            <li><a href="#">Acessibilidade</a></li>
+          </ul>
+        </nav>
 
-            <div class="login">Sign in | Sign up</div>
-        </div>
-
+        <div class="login">Sign in | Sign up</div>
+      </div>
     </header>
-
     <div class="slide">
-        <!-- aqui vai ficar o carrossel com a barra de pesquisa-->
-    </div>
- <!-- div criada para por o conteudo-->
-    <div class="content">
-         <!-- linha horizontal com os almocos-->
-         
-         <div class="titulo-almocos">
-            <h2>Almoços</h2>
-         </div>
-        <div class="fotos-almocos">
-            <div class="foto">
-                <img src="{% static 'img/mistura_salvadorjpg.jpg '%}">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum amet eum nam, officia aliquid similique vero hic placeat nihil! Vel eligendi obcaecati debitis reiciendis vitae, illum excepturi sit rerum quam?</p>
-            </div>
-
-            <div class="foto">
-                <img src="{% static 'img/mistura_salvadorjpg.jpg '%}">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum amet eum nam, officia aliquid similique vero hic placeat nihil! Vel eligendi obcaecati debitis reiciendis vitae, illum excepturi sit rerum quam?</p>
-            </div>
-
-            <div class="foto">
-                <img src="{% static 'img/mistura_salvadorjpg.jpg '%}">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum amet eum nam, officia aliquid similique vero hic placeat nihil! Vel eligendi obcaecati debitis reiciendis vitae, illum excepturi sit rerum quam?</p>
-            </div>
-
-            <div class="foto">
-                <img src="{% static 'img/mistura_salvadorjpg.jpg '%}">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum amet eum nam, officia aliquid similique vero hic placeat nihil! Vel eligendi obcaecati debitis reiciendis vitae, illum excepturi sit rerum quam?</p>
-            </div>
-            <div class="foto">
-                <img src="{% static 'img/mistura_salvadorjpg.jpg '%}">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum amet eum nam, officia aliquid similique vero hic placeat nihil! Vel eligendi obcaecati debitis reiciendis vitae, illum excepturi sit rerum quam?</p>
-            </div>
-
-        </div>
-
+      <!-- aqui vai ficar o carrossel com a barra de pesquisa-->
     </div>
 
-</body>
+    <!-- div criada para por o conteudo-->
+    <div class="almoco">
+      <!-- linha horizontal com os almocos-->
 
+      <div class="foto"></div>
+      <div class="titulo">
+        <h2>Mistura</h2>
+      </div>
+      <div class="localizacao">
+        <p>Salvador BA</p>
+      </div>
+
+      <div class="foto"></div>
+      <div class="titulo">
+        <h2>Mistura</h2>
+      </div>
+      <div class="localizacao">
+        <p>Salvador BA</p>
+      </div>
+
+      <div class="foto"></div>
+      <div class="titulo">
+        <h2>Mistura</h2>
+      </div>
+      <div class="localizacao">
+        <p>Salvador BA</p>
+      </div>
+
+      <div class="foto"></div>
+      <div class="titulo">
+        <h2>Mistura</h2>
+      </div>
+      <div class="localizacao">
+        <p>Salvador BA</p>
+      </div>
+    </div>
+  </body>
 </html>

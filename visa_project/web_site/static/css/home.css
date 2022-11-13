@@ -1,38 +1,28 @@
 
 .slide{
-    height: 200px;
+    height: 40vh;
     width: 100%;
 }
 
-.content{
+.almoco{
     margin-left: 10%;
     margin-right: 10%;
-}
-/*vamos ter que usar alguns @midia para definir a quantidade*/
-/*de elementos por linha*/
-.fotos-almocos{
     display: grid;
-    grid-template-columns:auto auto auto auto;
-    column-gap: 20px;
-    row-gap: 40px;
-    background-color: rgb(205, 205, 205);
-    border-radius: 10px;
-    justify-items: center;
-    place-items: center;
-    
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 25vh 3vh 3vh;
+    grid-column-gap: 5%; 
+    height: 40vh;
 }
-.foto img{
-    width: 180px;
-    
-    
-}
+
 .foto{
-    overflow: hidden;
-    border-radius: 5px;
-    border: 1px solid transparent;
-    
-    
+    grid-row: 1;
+    border-radius: 1px;
+    background-image: url(../img/mistura.jpeg);
 }
-.titulo-almocos{
-    margin-bottom: 2%;
+.titulo{
+    grid-row: 2;
+    font-size: 1rem;
+}
+.localizacao{
+    grid-row: 3;
 }
