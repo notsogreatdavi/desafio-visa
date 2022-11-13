@@ -1,0 +1,38 @@
+
+.slide{
+    height: 200px;
+    width: 100%;
+}
+
+.content{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+/*vamos ter que usar alguns @midia para definir a quantidade*/
+/*de elementos por linha*/
+.fotos-almocos{
+    display: grid;
+    grid-template-columns:auto auto auto auto;
+    column-gap: 20px;
+    row-gap: 40px;
+    background-color: rgb(205, 205, 205);
+    border-radius: 10px;
+    justify-items: center;
+    place-items: center;
+    
+}
+.foto img{
+    width: 180px;
+    
+    
+}
+.foto{
+    overflow: hidden;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    
+    
+}
+.titulo-almocos{
+    margin-bottom: 2%;
+}

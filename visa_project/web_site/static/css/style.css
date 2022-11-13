@@ -158,19 +158,16 @@ footer .boxs:nth-child(3) {
     width: 133px;
     z-index: 2;
 }
-#map_e6ce6c7d12a45fa8ad28588bc4b04efb {
-    border-radius: 10px;
-}
+
 .informar-location {
     margin-left: 25%;
 }
-
 
 .location{
     margin-left: 10%;
     margin-right: 10%;
 }
 
-
-
-
+div .espaco{
+    height: 200px;
+}
