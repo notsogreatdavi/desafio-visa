@@ -8,6 +8,7 @@
     <title>Homepage</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
     <link rel="stylesheet" href="{% static 'css/home.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/slide.css' %}" />
   </head>
 
   <body>
@@ -38,9 +39,20 @@
         <div class="login">Sign in | Sign up</div>
       </div>
     </header>
-    <div class="slide">
-      <!-- aqui vai ficar o carrossel com a barra de pesquisa-->
-    </div>
+    <div class="ism-slider" id="slide" style="z-index: -1; margin-bottom: 4%;">
+        <ol>
+          <li>
+            <img src="https://github.com/notsogreatdavi/desafio-visa/blob/main/visa_project/web_site/static/img/mistura_salvadorjpg.jpg?raw=true">
+          </li>
+          <li>
+            <img src="https://github.com/notsogreatdavi/desafio-visa/blob/main/visa_project/web_site/static/img/mistura_salvadorjpg.jpg?raw=true">
+          </li>
+          <li>
+            <img src="https://github.com/notsogreatdavi/desafio-visa/blob/main/visa_project/web_site/static/img/mistura_salvadorjpg.jpg?raw=true">
+          </li>
+        </ol>
+      </div>
+      
 
     <!-- div criada para por o conteudo-->
     <div class="almoco">
@@ -78,5 +90,6 @@
         <p>Salvador BA</p>
       </div>
     </div>
+    <script src="{% static 'scripts/slide.js'%}"></script>
   </body>
 </html>
